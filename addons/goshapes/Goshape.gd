@@ -192,7 +192,9 @@ func on_curve_changed():
 			if (axis_match & AXIS_Z) != 0:
 				p.z = edited_pos.z
 			curve.set_point_position(index, p)
-			
+	
+	print("path utils: ", PathUtils)
+	
 	if path_options.flatten:
 		PathUtils.flatten_curve(curve)
 	if not path_options.flatten:
@@ -284,6 +286,7 @@ func get_path_data(interpolate: int = -1) -> GoshPath:
 	if interpolate < 0:
 		interpolate = path_options.interpolate
 	var twists := _get_twists()
+	print("path utils", PathUtils)
 	var path_data := PathUtils.curve_to_path(curve, interpolate, inverted, twists)
 	if path_options.line != 0:
 		path_data = PathUtils.path_to_outline(path_data, path_options.line)

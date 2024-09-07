@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="PathOptions" load_steps=2 format=3 uid="uid://d0gcm8r0wgkk1"]
+
+[ext_resource type="Script" path="res://addons/goshapes/base/PathOptions.gd" id="1_0vcci"]
+
+[resource]
+resource_name = "PlatformPathOptions"
+script = ExtResource("1_0vcci")
+flatten = false
+twist = false
+line = 0.0
+rounding = 40.0
+rounding_mode = 0
+interpolate = 4
+points_on_ground = false
+offset_y = 6.3
+ground_placement_mask = 0

@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/goshapes/plugin.cfg")
+enabled=PackedStringArray("res://addons/extra_snaps/plugin.cfg", "res://addons/goshapes/plugin.cfg")
 
 [input]
 

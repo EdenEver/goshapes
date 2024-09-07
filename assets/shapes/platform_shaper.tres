@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BlockShaper" load_steps=6 format=3 uid="uid://b3sxeclh2dgfm"]
+
+[ext_resource type="Script" path="res://addons/goshapes/MeshShaper/Shapers/CapFlatShaper.gd" id="2_js4sn"]
+[ext_resource type="Material" uid="uid://clrtl8npwj8ca" path="res://assets/shapes/platform_cap_material.tres" id="2_w8vgr"]
+[ext_resource type="Script" path="res://addons/goshapes/MeshShaper/BlockShaper.gd" id="3_pctmc"]
+[ext_resource type="Resource" uid="uid://c5060vw7gn660" path="res://assets/shapes/cliff_wall_shaper.tres" id="4_3cgvr"]
+
+[sub_resource type="Resource" id="Resource_u7yqk"]
+script = ExtResource("2_js4sn")
+conform_to_wall = false
+material = ExtResource("2_w8vgr")
+build_collider = true
+collision_layer = 1
+enabled = true
+
+[resource]
+resource_name = "PlatformShaper"
+script = ExtResource("3_pctmc")
+cap_shaper = SubResource("Resource_u7yqk")
+wall_shaper = ExtResource("4_3cgvr")
+bottom_depth = 0.0
+collider_type = 2
+collider_ridge = 0.0
+enabled = true

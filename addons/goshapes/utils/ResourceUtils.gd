@@ -46,7 +46,7 @@ static func get_owner_name(owner: Variant) -> String:
 	return "?"
 
 
-static func get_type(resource: Resource) -> String:
+static func get_type(resource: Resource) -> String:	
 	var script = resource if resource is Script else resource.get_script()
 	var name = get_local_path(script)
 	var last_dot = name.rfind(".")
